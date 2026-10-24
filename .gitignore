@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+backend/venv/
+
+# Build output
+dist/
+
+# DuckDB data files (recreated on startup)
+backend/data/*.duckdb
+backend/data/*.duckdb.wal
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary
+*.tmp
+*.bak
