@@ -59,6 +59,19 @@ export function AuthProvider({ children }) {
           }
         }
         setLoading(false);
+      }).catch((err) => {
+        console.warn('Profile fetch failed, using fallback:', err);
+        const savedUser = localStorage.getItem('soilex_user');
+        if (savedUser) {
+          try {
+            setUser(JSON.parse(savedUser));
+          } catch {
+            logout();
+          }
+        } else {
+          logout();
+        }
+        setLoading(false);
       });
     } else {
       setLoading(false);
